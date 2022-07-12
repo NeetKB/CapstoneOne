@@ -11,13 +11,14 @@ import java.nio.file.Paths;
 import java.util.LinkedList;
 import java.util.List;
 
-
 public class XmlGrab {
 
-    //Reads data from an XML file
+    // Reads data from an XML file and copys the data to a LinkedList (List<User>
+    // userList).
     public static List<User> getUsers() {
         List<User> userList = new LinkedList<>();
         try {
+            // File path to the XML file.
             Path filePath = Paths.get("/Users/patrick/Documents/GitHub/CapstoneOne/src/dataset.xml");
             File file = new File(String.valueOf(filePath.toAbsolutePath()));
 
@@ -25,8 +26,8 @@ public class XmlGrab {
                 DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
                 DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
                 Document document = documentBuilder.parse(String.valueOf(filePath.toAbsolutePath()));
-
-                NodeList[] user = {document.getElementsByTagName("full_name"), document.getElementsByTagName("id")};
+                // Reads the XML tagName of full_name and id.
+                NodeList[] user = { document.getElementsByTagName("full_name"), document.getElementsByTagName("id") };
 
                 for (int i = 0; i < user[0].getLength(); i++) {
 
@@ -41,10 +42,9 @@ public class XmlGrab {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+        // Returns the userList with data from the XML file.
         return userList;
 
-
     }
-
 
 }
