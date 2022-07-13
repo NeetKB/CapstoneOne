@@ -22,7 +22,7 @@ public class DescListPdf {
 
             // Create OutputStream instance.
             OutputStream outputStream = new FileOutputStream(
-                    new File("/Users/patrick/Documents/GitHub/CapstoneOne/desc.pdf"));
+                    new File("/Users/patrick/Documents/GitHub/CapstoneOne/src/desc.pdf"));
 
             // Create PDFWriter instance.
             PdfWriter.getInstance(document, outputStream);

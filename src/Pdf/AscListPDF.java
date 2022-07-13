@@ -21,7 +21,7 @@ public class AscListPDF {
 
             // Create OutputStream instance.
             OutputStream outputStream = new FileOutputStream(
-                    new File("/Users/patrick/Documents/GitHub/CapstoneOne/asc.pdf"));
+                    new File("/Users/patrick/Documents/GitHub/CapstoneOne/src/asc.pdf"));
 
             // Create PDFWriter instance.
             PdfWriter.getInstance(document, outputStream);
