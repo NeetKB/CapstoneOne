@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
 
-import com.itextpdf.text.Chunk;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.List;
 import com.itextpdf.text.ListItem;
@@ -12,37 +11,32 @@ import com.itextpdf.text.pdf.PdfWriter;
 
 import static List.NumAsc.getNumAsc;
 
-public class PDFList {
-    public static void main(String args[]){
+public class PDFAsc {
+
+    public PDFAsc() {
+
         try {
-            //Create Document instance.
+            // Create Document instance.
             Document document = new Document();
 
-            //Create OutputStream instance.
-            OutputStream outputStream =
-                    new FileOutputStream(new File("/Users/patrick/Documents/GitHub/CapstoneOne/data.pdf"));
+            // Create OutputStream instance.
+            OutputStream outputStream = new FileOutputStream(
+                    new File("/Users/patrick/Documents/GitHub/CapstoneOne/asc.pdf"));
 
-            //Create PDFWriter instance.
+            // Create PDFWriter instance.
             PdfWriter.getInstance(document, outputStream);
 
-            //Open the document.
+            // Open the document.
             document.open();
 
-            //Create ordered list object
+            // Create asc List
             List ascList = new List(List.ORDERED);
             ascList.add(new ListItem(String.valueOf((getNumAsc()))));
-//            ascList.add(new ListItem("Oredered List item2"));
 
-            //Create unordered list object
-//            List unorderedList = new List(List.UNORDERED);
-//            unorderedList.add(new ListItem("Unoredered List item1"));
-//            unorderedList.add(new ListItem("Unoredered List item2"));
-
-            //Add content to the document using List objects.
+            // Add casdList to the pdf.
             document.add(ascList);
-//            document.add(unorderedList);
 
-            //Close document and outputStream.
+            // Close document and outputStream.
             document.close();
             outputStream.close();
 
