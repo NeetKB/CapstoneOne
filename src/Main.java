@@ -1,4 +1,4 @@
-import List.Menu.Menu;
+import Menu.Menu;
 
 public class Main {
 
