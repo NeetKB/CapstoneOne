@@ -11,9 +11,9 @@ import com.itextpdf.text.pdf.PdfWriter;
 
 import static List.NumAsc.getNumAsc;
 
-public class PDFAsc {
+public class AscListPDF {
 
-    public PDFAsc() {
+    public static void pdfAsc() {
 
         try {
             // Create Document instance.

@@ -4,6 +4,8 @@ import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.pdf.PdfWriter;
 
+import Pdf.AscListPDF;
+
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.LinkedList;
@@ -20,8 +22,5 @@ public class NumAsc {
         ascList.addAll(getUsers());
         ascList.sort((u1, u2) -> u1.getId() - u2.getId());
         return ascList;
-
-
-
     }
 }
