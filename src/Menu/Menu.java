@@ -16,7 +16,7 @@ public class Menu {
         System.out.println("\n");
         System.out.println("Please enter the corresponding number to choose one of the following options:" + "\n"
                 + "1 Show data in ascending order" + "\n" + "2 Show data in descending order " + "\n"
-                + "3 Export data to PDF in ascending order " + "\n" + "4 Export data to PDF in descending order" + "\n"
+                + "3 Export data to PDF in ID ascending order " + "\n" + "4 Export data to PDF in ID descending order" + "\n"
                 + "5 Exit");
 
         Scanner input = new Scanner(System.in);
