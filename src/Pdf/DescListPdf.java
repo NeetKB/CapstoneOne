@@ -12,9 +12,9 @@ import java.util.Collections;
 
 import static List.NumDes.getNumDes;
 
-public class PDFDesc {
+public class DescListPdf {
 
-    public PDFDesc() {
+    public static void pdfDesc() {
 
         try {
             // Create Document instance.
