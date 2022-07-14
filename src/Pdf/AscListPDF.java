@@ -40,7 +40,7 @@ public class AscListPDF {
             document.close();
             outputStream.close();
 
-            System.out.println("Pdf created successfully.");
+            System.out.println("\n" + "\n" + "PDF created successfully");
         } catch (Exception e) {
             e.printStackTrace();
         }

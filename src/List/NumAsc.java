@@ -1,13 +1,5 @@
 package List;
 
-import com.itextpdf.text.Document;
-import com.itextpdf.text.DocumentException;
-import com.itextpdf.text.pdf.PdfWriter;
-
-import Pdf.AscListPDF;
-
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.util.LinkedList;
 import java.util.List;
 

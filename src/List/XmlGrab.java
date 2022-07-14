@@ -13,7 +13,7 @@ import java.util.List;
 
 public class XmlGrab {
 
-    // Reads data from an XML file and copys the data to a LinkedList (List<User>
+    // Reads data from an XML file and copys the data to a List (List<User>
     // userList).
     public static List<User> getUsers() {
         List<User> userList = new LinkedList<>();
