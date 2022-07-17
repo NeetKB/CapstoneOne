@@ -13,8 +13,10 @@ import java.util.List;
 
 public class XmlGrab {
 
-    // Reads data from an XML file and copys the data to a List (List<User>
-    // userList).
+    /*
+     * Reads data from an XML file and copies the data to a List (List<User>
+     * userList).
+     */
     public static List<User> getUsers() {
         List<User> userList = new LinkedList<>();
         try {
@@ -26,11 +28,17 @@ public class XmlGrab {
                 DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
                 DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
                 Document document = documentBuilder.parse(String.valueOf(filePath.toAbsolutePath()));
-                // Reads the XML tagName of full_name and id.
+                /*
+                 * Elements with tagName of full_name and id is used to create the variables for
+                 * user is stored in NodeList user.
+                 */
                 NodeList[] user = { document.getElementsByTagName("full_name"), document.getElementsByTagName("id") };
-
+                /*
+                 * Loop to read and add new users to the userList by reading elements with
+                 * tagnames fullname and ID.
+                 */
                 for (int i = 0; i < user[0].getLength(); i++) {
-
+                    // Adding elements to the specified index.
                     String fullName = user[0].item(i).getTextContent();
                     int id = Integer.parseInt(user[1].item(i).getTextContent());
                     User newUser = new User(fullName, id);
