@@ -33,7 +33,7 @@ public class AscListPDF {
             List ascList = new List(List.ORDERED);
             ascList.add(new ListItem(String.valueOf((getNumAsc()))));
 
-            // Add casdList to the pdf.
+            // Add ascList to the pdf.
             document.add(ascList);
 
             // Close document and outputStream.
